@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pr tamplate add ([40ddc36](https://github.com/algoscope-hq/AlgoScope/commit/40ddc3631f8749e2327992b719dec45de9ee65ec))
 - refine Comparison Mode SEO metadata and update sitemap ([fc2dd52](https://github.com/algoscope-hq/AlgoScope/commit/fc2dd525f80a7996ea18fae2de1922fd202a5e72))
 - tooltip hover jsx file added to src/components ([f42986a](https://github.com/algoscope-hq/AlgoScope/commit/f42986a2dc68ae2cbbce37176579eeda6e384127))
+- add recent algorithms dropdown inside Explore menu with persistent session history ([827e7f1](https://github.com/algoscope-hq/AlgoScope/commit/827e7f1))
 
 ### Bug Fixes
 

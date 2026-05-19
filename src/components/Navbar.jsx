@@ -164,26 +164,34 @@ export const Navbar = () => {
                   ) : (
                     history.map((item) => {
                       const current = algorithmLinks.find(
-  (link) => link.href === pathname
-)?.name
+                        (link) => link.href === pathname
+                      )?.name
 
-let history = []
+                      let history = []
 
-try {
-  const saved = localStorage.getItem('algo-history')
-  history = saved ? JSON.parse(saved) : []
-} catch (error) {
-  console.error('Failed to parse algo-history:', error)
-}
+                      try {
+                        const saved = localStorage.getItem('algo-history')
+                        history = saved ? JSON.parse(saved) : []
 
-if (current && !history.includes(current)) {
-  history = [current, ...history].slice(0, 5)
+                        if (!Array.isArray(history)) {
+                          history = []
+                        }
+                      } catch (error) {
+                        console.error('Failed to parse algo-history:', error)
+                      }
 
-  localStorage.setItem(
-    'algo-history',
-    JSON.stringify(history)
-  )
-}
+                      if (current && !history.includes(current)) {
+                        history = [current, ...history].slice(0, 5)
+
+                        try {
+                          localStorage.setItem(
+                            'algo-history',
+                            JSON.stringify(history)
+                          )
+                        } catch (error) {
+                          console.error('Failed to save algo-history:', error)
+                        }
+                      }
 
                       return (
                         <Link
